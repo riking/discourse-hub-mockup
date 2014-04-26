@@ -1,0 +1,21 @@
+<% js_file 'upload' %>
+
+<div id="container">
+  Please wait...
+
+  <div id="error-container" style="display: none;">
+    ERROR:
+  </div>
+</div>
+
+<!-- this form is filled by the JS when it recieves the data from the site -->
+
+<form id="fillme" action="confirm" method="post">
+  <%= empty_form_inputs %>
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+</form>
+
+<noscript>
+  JavaScript is required to push your preferences to the Discourse Hub.
+  Please enable JavaScript for external iframes and try again.
+</noscript>

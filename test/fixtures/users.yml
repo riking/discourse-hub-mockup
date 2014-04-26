@@ -1,0 +1,65 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id                            :integer          not null, primary key
+#  email                         :string(255)      not null
+#  full_name                     :string(255)      not null
+#  bio                           :text
+#  website                       :string(255)
+#  email_digest_days             :integer
+#  email_private_messages        :boolean
+#  email_quotes_replies_mentions :boolean
+#  email_mailing_list            :boolean
+#  email_always                  :boolean
+#  auto_track_delay_ms           :integer
+#  new_topic_duration_minutes    :integer
+#  external_links_in_new_tab     :boolean
+#  enable_quoting                :boolean
+#  dynamic_favicon               :boolean
+#  use_custom_avatar             :boolean
+#  custom_avatar_url             :string(255)
+#  profile_background_url        :string(255)
+#  created_at                    :datetime
+#  updated_at                    :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  name: MyString
+  customAvatar: MyString
+  customAvatarUrl: MyString
+  profileBackgroundUrl: MyString
+  bio: MyString
+  webite: MyString
+  email_digest_days: MyString
+  email_private_messages: MyString
+  email_quotes_replies_mentions: MyString
+  email_mailing_list: MyString
+  email_always: MyString
+  auto_track_delay_ms: MyString
+  new_topic_duration_minutes: MyString
+  external_links_in_new_tab: MyString
+  enable_quoting: MyString
+  dynamic_favicon: MyString
+
+two:
+  email: MyString
+  name: MyString
+  customAvatar: MyString
+  customAvatarUrl: MyString
+  profileBackgroundUrl: MyString
+  bio: MyString
+  webite: MyString
+  email_digest_days: MyString
+  email_private_messages: MyString
+  email_quotes_replies_mentions: MyString
+  email_mailing_list: MyString
+  email_always: MyString
+  auto_track_delay_ms: MyString
+  new_topic_duration_minutes: MyString
+  external_links_in_new_tab: MyString
+  enable_quoting: MyString
+  dynamic_favicon: MyString

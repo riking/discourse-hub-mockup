@@ -1,0 +1,152 @@
+// Place all the styles related to the PrefsPush controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+  background-color: #d3d3d3;
+  font: 14px/19px Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 3%;
+  background-color: white;
+  padding: 10px;
+}
+
+div#container {
+  max-width: 600px;
+  margin: 0 auto;
+
+  // The JS switches the class from no-reconfirm to reconfirm when a change is made on the /confirm page.
+  // This hides the /perform submit button and shows the /confirm submit button.
+  &.no-reconfirm {
+    .needs-no-reconfirm {
+      display: inherit;
+    }
+    .needs-reconfirm {
+      display: none;
+    }
+  }
+  &.reconfirm {
+    .needs-reconfirm {
+      display: inherit;
+    }
+    .needs-no-reconfirm {
+      display: none;
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: normal;
+  color: #333333;
+  background: #ededed;
+  border: none;
+
+  &:hover {
+    color: #fff;
+    background: #aaa;
+  }
+
+  &.btn-primary {
+    color: #fff;
+    background: #00aaff;
+
+    &:hover {
+      color: #fff;
+      background: #0081c2;
+    }
+  }
+
+  &.in-list {
+    padding: 0 10px;
+    line-height: 24px;
+    color: #844;
+    font-weight: bold;
+  }
+}
+
+ul {
+  list-style: none;
+}
+li {
+  line-height: 24px;
+  margin: 5px 0;
+  padding: 0;
+  display: list-item;
+
+  .btn {
+    margin: 0 8px 0 -30px;
+  }
+
+  &.not-changed {
+    background-color: #d3d3d3;
+    .btn {
+      visibility: hidden;
+    }
+  }
+  &.strike {
+    text-decoration: line-through;
+    .btn {
+      visibility: hidden;
+    }
+  }
+  &.modify {
+    background-color: lighten(yellow, 35%);
+  }
+  &.add {
+    background-color: lighten(lightgreen, 10%);
+  }
+  &.remove {
+    background-color: lighten(lightcoral, 15%);
+  }
+
+  b {
+    color: darken(darkgray, 40%);
+    &.true {
+      color: darken(darkgreen, 10%);
+    }
+    &.false {
+      color: darken(darkred, 10%);
+    }
+  }
+
+  div.image-compare {
+    display: block;
+    text-align: center;
+  }
+  img {
+    max-height: 100px;
+    max-width: 200px;
+    border: 3px solid black;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+
+    &.added {
+      border: 3px solid darkgreen;
+    }
+    &.removed {
+      border: 3px solid darkred;
+    }
+  }
+}
+
+.title {
+  .logo {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.img-wrap {
+  position: relative;
+  height: 100px;
+}
+

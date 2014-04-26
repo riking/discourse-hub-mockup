@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'prefs_push/upload'
+  post 'prefs_push/confirm'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
