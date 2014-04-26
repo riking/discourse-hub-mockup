@@ -12,6 +12,7 @@ class PrefsPushController < ApplicationController
     end
 
     unless params[:email] == user.email
+      # commented for testing
       # redirect_to action: 'log_in', status: 303
     end
 
