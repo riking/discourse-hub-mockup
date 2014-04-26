@@ -10,7 +10,7 @@
 
   <p>
   <span class="needs-no-reconfirm">If this is all okay, click Submit.</span>
-  <span class="needs-reconfirm">Please review your changes.</span>
+  <span class="needs-reconfirm">Please review your changes, or click Reset to readd the entries you struck.</span>
   </p>
 
   <form id="form" action="404" method="post">
@@ -19,5 +19,12 @@
 
     <button class="btn btn-primary needs-no-reconfirm" formaction="perform">Submit</button>
     <button class="btn btn-primary needs-reconfirm" formaction="confirm">Review Changes</button>
+  </form>
+  <br>
+  <form id="form" action="confirm" method="post">
+    <%= filled_form_inputs(params) %>
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+
+    <button class="btn needs-reconfirm" formaction="confirm">Reset</button>
   </form>
 </div>
